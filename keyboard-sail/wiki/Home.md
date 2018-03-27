@@ -1,4 +1,4 @@
-## Welcome to the FHS Keyboard Design SAiL Session Wiki
+# Welcome to the FHS Keyboard Design SAiL Session Wiki
 
 1. The keyboard parts
 2. Creating the case
