@@ -1,4 +1,4 @@
-## The Parts that make up a keyboard
+## The parts that make up a keyboard
 
 * Switches
 
