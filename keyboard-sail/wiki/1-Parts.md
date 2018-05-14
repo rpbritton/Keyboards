@@ -6,8 +6,8 @@ https://steelseries.com/blog/gaming-keyboard-mechanical-switches-44
 * Keycaps
 
 * Controller   
-![](http://www.pighixxx.net/wp-content/uploads/2016/07/pro_micro_pinout_v1_0_blue.png)   
-http://www.pighixxx.net/portfolio-items/pro-micro/   
+![](https://cdn.sparkfun.com//assets/parts/9/3/2/6/12640-01a.jpg)   
+https://www.sparkfun.com/products/12640   
 * Case
 
 * Plate
