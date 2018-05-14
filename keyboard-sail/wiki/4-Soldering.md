@@ -8,7 +8,8 @@ https://npx3.wordpress.com/2016/01/28/the-blue-pill-option-building-a-keyboard-p
 1. ***Always check first to make sure your diodes work with a multimeter.***
 2. Make each row look like this using wirecutters and tweezers. I strongly urge you to ask if you don't understand why you should wire it this way.   
 ![](https://i.imgur.com/mAfs39u.jpg)
-3. Add solder to the switch pins first, then add solder between the diode leads. Creating a "hook" or twisting them together will help the solder joint.
+3. Add solder to the switch pins first.
+4. Then add solder between the diode leads. Creating a "hook" or twisting them together will help create a better solder joint.
 ## Columns
 1. Measure out wire to connect the top and bottom switches of a column based on the other (unused) switch pin.
 2. Expose the parts of the wire that will touch the pins of the switches like this:
@@ -23,7 +24,7 @@ https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide/hardware-ove
 All the pins labeled with a blue number are GPIO capable. Choose the number you need for your matrix (sum of rows and columns). Avoid pins '1' and '0', and if you plan on using indicator lights leave 1 "red" (PWM) pin for each LED.
 2. Run 1 wire on each column and row to any of the selected pins.
 ## Indicator LEDs
-1. Check to see if the led works with a resistor and a multimeter.
+1. ***Always check to see if the led works with a resistor and a multimeter.***
 2. Position each LED whereever you want them.
 3. Connect the longer of the two leads to a resistor.
 4. Connect the other lead of the resistor to the RAW pin (look at the pinout diagram of the Pro Micro above).
