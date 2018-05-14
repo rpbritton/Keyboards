@@ -21,13 +21,20 @@
 https://electronics.stackexchange.com/questions/114993/pressing-same-key-rows-at-the-same-time
 
 ## Diodes
-* They only let current flow one way: **towards the black end, but not against it.**
+* They only let current flow one way: **from anode to cathode. The black end of the diode is the cathode.**
 * They are used to prevent ghosting (when a switch appears pressed when it isn't).
 
 <img width="300px" src="http://blog.komar.be/wp-content/uploads/2013/09/e.png">
 <img width="300px" src="http://blog.komar.be/wp-content/uploads/2013/09/f.png">
 
 http://blog.komar.be/how-to-make-a-keyboard-the-matrix/
+## LEDs
+* LEDs actually work like diodes (**L**ight **E**mitting _**D**iodes_).
+* The longer lead is is the anode, so **the positive voltage must be applied there.**
+* They will eat up all the current and burn out, so you must add a resistor to limit it.
+* Here's what the circuit looks like:   
+![](https://upload.wikimedia.org/wikipedia/commons/c/c9/LED_circuit.svg)   
+https://en.wikipedia.org/wiki/LED_circuit
 # Physical Wiring
 ## Think about your matrix
 * Split up your layout into rows and columns
@@ -47,3 +54,16 @@ https://npx3.wordpress.com/2016/01/28/the-blue-pill-option-building-a-keyboard-p
 3. Hook the ends wrap around the top and bottom pins. It should look like this:   
 ![](https://i.imgur.com/dLgxQ5i.jpg)
 4. Add solder to each contact.
+## Connecting it to the microcontroller
+1. Observe the image below:   
+![](https://cdn.sparkfun.com/assets/9/c/3/c/4/523a1765757b7f5c6e8b4567.png)   
+https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide/hardware-overview-pro-micro   
+All the pins labeled with a blue number are GPIO capable. Choose the number you need for your matrix (sum of rows and columns). Avoid pins '1' and '0', and if you plan on using indicator lights leave 1 "red" (PWM) pin for each LED.
+2. Run 1 wire on each column and row to any of the selected pins.
+## Indicator LEDs
+1. Check to see if the led works with a resistor and a multimeter.
+2. Position each LED whereever you want them.
+3. Connect the longer of the two leads to a resistor.
+4. Connect the other lead of the resistor to the RAW pin (look at the pinout diagram of the Pro Micro above).
+5. Connect the shorter of the two leads to a GPIO that is marked "red" (PWM).
+6. Do this for every LED (but choose different GPIOs).
