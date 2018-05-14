@@ -5,7 +5,7 @@ We will be making sandwich cases from acrylic.
  
    Part | Dimensions
    --- | ---
-   Switch Opening | 14.00x14.00mm
+   Switch Cutout | 14.00x14.00mm
    Switch Spacing | 19.05x19.05mm
    Recommended Margin | 10.00mm
    Screw Hole Size | 1.95mm (diameter)
