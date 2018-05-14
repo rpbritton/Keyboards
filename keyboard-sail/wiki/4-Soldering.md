@@ -8,8 +8,7 @@ https://npx3.wordpress.com/2016/01/28/the-blue-pill-option-building-a-keyboard-p
 1. ***Always check first to make sure your diodes work with a multimeter.***
 2. Make each row look like this using wirecutters and tweezers. I strongly urge you to ask if you don't understand why you should wire it this way.   
 ![](https://i.imgur.com/mAfs39u.jpg)
-3. Add solder to the switch pins first.
-4. Then add solder between the diode leads. Creating a "hook" or twisting them together will help create a better solder joint.
+3. I'd recommend soldering the switch pins first, and then adding solder between the diode leads. Creating a "hook" or twisting them together will help create a better solder joint.
 ## Columns
 1. Measure out wire to connect the top and bottom switches of a column based on the other (unused) switch pin.
 2. Expose the parts of the wire that will touch the pins of the switches like this:
