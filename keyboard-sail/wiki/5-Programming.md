@@ -12,3 +12,10 @@ https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manag
 8. Next go to **Sketch** > **Include Library** > **Manage Libraries...**
 9. Search for `keyboard` and install `HID by Arduino`, `Keyboard by Arduino`, and `Mouse by Arduino`.
 10. Download the sample programs: https://github.com/rpbritton/keyboard-sail/archive/master.zip.
+## Basics of Arduino Programming   
+It uses the 'c' programming language. The basic setup as follows:
+1. Add your includes.
+2. Create your global variables.
+3. `setup()` runs once at the beginning to configure stuff like your GPIO pins.
+4. `loop()` is called after `setup()` and then everytime it ends (like a `while (true)` loop).
+## Try out `blinky.ino`
