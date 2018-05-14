@@ -1,1 +1,0 @@
-* Download Arduino IDE.
