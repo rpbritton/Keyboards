@@ -16,7 +16,7 @@
 5. If a column pin is low you know that switch is pressed.   
 ![](https://i.stack.imgur.com/No6u5.gif)   
 https://electronics.stackexchange.com/questions/114993/pressing-same-key-rows-at-the-same-time   
-#### Diodes, which only lets current flow one way, are used to prevent ghosting (when a switch appears pressed when it isn't).   
+#### Diodes, which only let current flow one way, are used to prevent ghosting (when a switch appears pressed when it isn't).   
 ![](http://blog.komar.be/wp-content/uploads/2013/09/e.png)   
 http://blog.komar.be/how-to-make-a-keyboard-the-matrix/
 # Physical Wiring
