@@ -1,5 +1,4 @@
-# Background Knowledge
-## The Basics
+## The Fundamentals
 * Circuits (in this simple case) can be high (VCC), low (GND), or floating. It's the same voltage throughout (5V).
 * Controller has GPIOs (**G**eneral **P**urpose **I**nput **O**utput pins).
    * Output pins are set to high or low.
@@ -35,4 +34,3 @@ http://blog.komar.be/how-to-make-a-keyboard-the-matrix/
 * Here's what the circuit looks like:   
 ![](https://upload.wikimedia.org/wikipedia/commons/c/c9/LED_circuit.svg)   
 https://en.wikipedia.org/wiki/LED_circuit
-# Physical Wiring
