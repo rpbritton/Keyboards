@@ -14,14 +14,36 @@
 3. Set all the columns to be pulled high inputs.
 4. Set one row to low and check the column pins.
 5. If a column pin is low you know that switch is pressed.   
-![](https://i.stack.imgur.com/No6u5.gif)   
-https://electronics.stackexchange.com/questions/114993/pressing-same-key-rows-at-the-same-time   
-#### Diodes, which only let current flow one way, are used to prevent ghosting (when a switch appears pressed when it isn't).   
-![](http://blog.komar.be/wp-content/uploads/2013/09/e.png)   
+6. Check the next row and repeat.
+
+![](https://i.stack.imgur.com/No6u5.gif)
+
+https://electronics.stackexchange.com/questions/114993/pressing-same-key-rows-at-the-same-time
+
+## Diodes
+* They only let current flow one way: **towards the black end, but not against it.**
+* They are used to prevent ghosting (when a switch appears pressed when it isn't).
+
+<img width="300px" src="http://blog.komar.be/wp-content/uploads/2013/09/e.png">
+<img width="300px" src="http://blog.komar.be/wp-content/uploads/2013/09/f.png">
+
 http://blog.komar.be/how-to-make-a-keyboard-the-matrix/
 # Physical Wiring
-## Thinking about your matrix
+## Think about your matrix
 * Split up your layout into rows and columns
 * ***Make sure the sum of the number of columns and rows is less than or equal to 20.***
+* Here is an example of a standard 104 key layout:   
+![](https://npx3.files.wordpress.com/2016/01/standardwiring.png)   
+https://npx3.wordpress.com/2016/01/28/the-blue-pill-option-building-a-keyboard-part-4/
 ## Diodes / Rows
-1. ***Always check first to make sure your diodes work***
+1. ***Always check first to make sure your diodes work with a multimeter.***
+2. Make each row look like this using wirecutters and tweezers. I strongly urge you to ask if you don't understand why you should wire it this way.   
+![](https://i.imgur.com/mAfs39u.jpg)
+3. Add solder to the switch pins first, then add solder between the diode leads. Creating a "hook" or twisting them together will help the solder joint.
+## Columns
+1. Measure out wire to connect the top and bottom switches of a column based on the other (unused) switch pin.
+2. Expose the parts of the wire that will touch the pins of the switches like this:
+![](https://i.imgur.com/oEeDrEj.jpg)   
+3. Hook the ends wrap around the top and bottom pins. It should look like this:   
+![](https://i.imgur.com/dLgxQ5i.jpg)
+4. Add solder to each contact.
