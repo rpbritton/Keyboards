@@ -11,4 +11,4 @@ https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manag
 7. Click **Close** and go back to **Tools** > **Board: ...** and scroll down until you find `SparkFun Pro Micro`.
 8. Next go to **Sketch** > **Include Library** > **Manage Libraries...**
 9. Search for `keyboard` and install `HID by Arduino`, `Keyboard by Arduino`, and `Mouse by Arduino`.
-10. Download some of my sample files programs: https://github.com/rpbritton/keyboard-sail/archive/master.zip.
+10. Download the sample programs: https://github.com/rpbritton/keyboard-sail/archive/master.zip.
