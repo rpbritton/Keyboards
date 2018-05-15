@@ -24,7 +24,7 @@ All the pins labeled with a blue number are GPIO capable. Choose the number you 
 2. Run 1 wire on each column and row to any of the selected pins.
 ## Indicator LEDs
 1. ***Always check to see if the led works with a resistor and a multimeter.***
-2. Position each LED whereever you want them.
+2. Position each LED wherever you want them.
 3. Connect the longer of the two leads to a resistor.
 4. Connect the other lead of the resistor to the RAW pin (look at the pinout diagram of the Pro Micro above).
 5. Connect the shorter of the two leads to a GPIO that is marked "red" (PWM).
