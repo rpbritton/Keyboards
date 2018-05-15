@@ -33,3 +33,6 @@ Command | Description
 ## KLE + Plate & Case Builder: _Less freedom, less prone to human error._   
 * [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/)   
 * [Plate & Case Builder](http://builder.swillkb.com/)
+## Lasercutting your case
+1. Email me your `.dwg` files so I can download them onto the computer connected to the laser cuter.
+2. 
