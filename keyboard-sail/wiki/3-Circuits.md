@@ -20,8 +20,8 @@
 https://electronics.stackexchange.com/questions/114993/pressing-same-key-rows-at-the-same-time
 
 ## Diodes
-* They only let current flow one way: **from anode to cathode. The black end of the diode is the cathode.**
-* They are used to prevent ghosting (when a switch appears pressed when it isn't).
+* Only let current flow one way: **from anode to cathode. The black end of the diode is the cathode.**
+* Used to prevent ghosting (when a switch appears pressed when it isn't).
 
 <img width="300px" src="http://blog.komar.be/wp-content/uploads/2013/09/e.png">
 <img width="300px" src="http://blog.komar.be/wp-content/uploads/2013/09/f.png">
@@ -29,7 +29,7 @@ https://electronics.stackexchange.com/questions/114993/pressing-same-key-rows-at
 http://blog.komar.be/how-to-make-a-keyboard-the-matrix/
 ## LEDs
 * LEDs actually work like diodes (**L**ight **E**mitting _**D**iodes_).
-* The longer lead is is the anode, so **the positive voltage must be applied there.**
+* The longer lead is the anode, so **the positive voltage must be applied there.**
 * They will eat up all the current and burn out, so you must add a resistor to limit it.
 * Here's what the circuit looks like:   
 ![](https://upload.wikimedia.org/wikipedia/commons/c/c9/LED_circuit.svg)   
