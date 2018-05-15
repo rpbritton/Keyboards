@@ -5,7 +5,7 @@ We will be making sandwich cases from acrylic.
 2. This program is text-command based. When you type, it should show up at the bottom.
 3. Try the command `new` and choose the default format. That should create a new file.
 4. Run `save` and save two files, one for your bottom plate and one for your top plate.
-5. You are now ready to start. Get a calculater. Get your layout ready on [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/) so you know the key spacing. (1u = 19.05mm).
+5. You are now ready to start. Get a calculater and get your layout ready on [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/) so you know the key spacing. (1u = 19.05mm).
 6. Here are some specifications and useful commands:
 
 Part | Dimensions
