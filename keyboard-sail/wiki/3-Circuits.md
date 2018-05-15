@@ -16,7 +16,6 @@
 6. Check the next row and repeat.   
 ![](https://i.stack.imgur.com/No6u5.gif)   
 <sup>[Image Credit](https://electronics.stackexchange.com/questions/114993/pressing-same-key-rows-at-the-same-time)</sup>
-
 ## Diodes
 * Only let current flow one way: **from anode to cathode. The black end of the diode is the cathode.**
 * Used to prevent ghosting (when a switch appears pressed when it isn't).
@@ -32,3 +31,8 @@
 * Here's what the circuit looks like:   
 ![](https://upload.wikimedia.org/wikipedia/commons/c/c9/LED_circuit.svg)   
 <sup>[Image Credit](https://en.wikipedia.org/wiki/LED_circuit)</sup>
+## Using a multimeter to check the continuity of a circuit
+1. Turn the multimeter to the Ω (ohm) symbol. This will set the multimeter to display the resistance between the two leads. If there is no continuity it will display OL (**O**pen **L**oop) or something else.
+2. Try tapping the black and red leads together. The reading should become 0Ω. 
+3. You can also do this at two ends of a circuit, and if it reads 0Ω you know they're continuous.
+4. For a diode, because **current flows from the red lead (VCC) to the black lead (GND)**, the meter will only display continuity for one direction (red at the anode and black at the cathode).
