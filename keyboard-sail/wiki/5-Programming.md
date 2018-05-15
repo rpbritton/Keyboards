@@ -1,6 +1,6 @@
 ## Set up the programming environment
 1. Download Arduino IDE: https://www.arduino.cc/en/Main/Software.
-2. Open Arduino IDE.
+2. Install and open Arduino IDE.
 3. Go to **File** > **Preferences**.
 4. Copy and paste the following URL into the **Additional Board Manager URLs** box:
 ```
