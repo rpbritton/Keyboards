@@ -2,7 +2,7 @@
 * Circuits (in this simple case) can be high (VCC), low (GND), or floating. It's the same voltage throughout (5V).
 * The controller has GPIOs (**G**eneral **P**urpose **I**nput **O**utput pins).
    * Output pins are set to high or low.
-   * Input pins are pulled high with a resistor or left floating.
+   * Input pins are internally pulled high with a resistor or left floating.
       * This creates a "weak" logic value that can be overrun by a direct connection.
 * Back to mechanical keyboards, most switches will create a connection between two contacts when pressed.
 * So an input pin pulled high will read high unless the switch (connected to GND) is pressed.
