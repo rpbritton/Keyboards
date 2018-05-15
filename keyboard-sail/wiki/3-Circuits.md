@@ -1,6 +1,6 @@
 ## The Fundamentals
 * Circuits (in this simple case) can be high (VCC), low (GND), or floating. It's the same voltage throughout (5V).
-* Controller has GPIOs (**G**eneral **P**urpose **I**nput **O**utput pins).
+* The controller has GPIOs (**G**eneral **P**urpose **I**nput **O**utput pins).
    * Output pins are set to high or low.
    * Input pins are pulled high with a resistor or left floating.
       * This creates a "weak" logic value that can be overrun by a direct connection.
