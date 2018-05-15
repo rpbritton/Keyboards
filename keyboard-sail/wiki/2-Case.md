@@ -10,5 +10,5 @@ We will be making sandwich cases from acrylic.
    Recommended Margin | 10.00mm
    Screw Hole Size | 1.95mm (diameter)
 ## KLE + Plate & Case Builder: _Less freedom, less prone to human error._   
-   * [Keyboard layout editor](http://www.keyboard-layout-editor.com/)   
+   * [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/)   
    * [Plate & Case Builder](http://builder.swillkb.com/)
