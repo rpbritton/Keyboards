@@ -3,7 +3,7 @@
 * ***Make sure the sum of the number of columns and rows is less than or equal to 20.***
 * Here is an example of a standard 104 key layout:   
 ![](https://npx3.files.wordpress.com/2016/01/standardwiring.png)   
-https://npx3.wordpress.com/2016/01/28/the-blue-pill-option-building-a-keyboard-part-4/
+<sup>[Image Credit](https://npx3.wordpress.com/2016/01/28/the-blue-pill-option-building-a-keyboard-part-4/)</sup>
 ## Diodes / Rows
 1. ***Always check first to make sure your diodes work with a multimeter.***
 2. Make each row look like this using wirecutters and tweezers. I strongly urge you to ask if you don't understand why you should wire it this way.   
@@ -17,10 +17,9 @@ https://npx3.wordpress.com/2016/01/28/the-blue-pill-option-building-a-keyboard-p
 ![](https://i.imgur.com/dLgxQ5i.jpg)
 4. Add solder to each contact.
 ## Connecting it to the microcontroller
-1. Observe the image below:   
+1. Observe the image below. All the pins labeled with a blue number are GPIO capable. Choose the number you need for your matrix (sum of rows and columns). If you plan on using indicator lights leave 1 "red" (PWM) pin for each LED.   
 ![](https://cdn.sparkfun.com/assets/9/c/3/c/4/523a1765757b7f5c6e8b4567.png)   
-https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide/hardware-overview-pro-micro   
-All the pins labeled with a blue number are GPIO capable. Choose the number you need for your matrix (sum of rows and columns). Avoid pins '1' and '0', and if you plan on using indicator lights leave 1 "red" (PWM) pin for each LED.
+<sup>[Image Credit](https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide/hardware-overview-pro-micro)</sup>
 2. Run 1 wire on each column and row to any of the selected pins.
 ## Indicator LEDs
 1. ***Always check to see if the led works with a resistor and a multimeter.***
