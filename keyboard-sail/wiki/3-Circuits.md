@@ -13,11 +13,9 @@
 3. Set all the columns to be pulled high inputs.
 4. Set one row to low and check the column pins.
 5. If a column pin is low you know that switch is pressed.   
-6. Check the next row and repeat.
-
-![](https://i.stack.imgur.com/No6u5.gif)
-
-https://electronics.stackexchange.com/questions/114993/pressing-same-key-rows-at-the-same-time
+6. Check the next row and repeat.   
+![](https://i.stack.imgur.com/No6u5.gif)   
+<sup>[Image Credit](https://electronics.stackexchange.com/questions/114993/pressing-same-key-rows-at-the-same-time)</sup>
 
 ## Diodes
 * Only let current flow one way: **from anode to cathode. The black end of the diode is the cathode.**
@@ -26,11 +24,11 @@ https://electronics.stackexchange.com/questions/114993/pressing-same-key-rows-at
 <img width="300px" src="http://blog.komar.be/wp-content/uploads/2013/09/e.png">
 <img width="300px" src="http://blog.komar.be/wp-content/uploads/2013/09/f.png">
 
-http://blog.komar.be/how-to-make-a-keyboard-the-matrix/
+<sup>[Images Credit](http://blog.komar.be/how-to-make-a-keyboard-the-matrix/)</sup>
 ## LEDs
 * LEDs actually work like diodes (**L**ight **E**mitting _**D**iodes_).
 * The longer lead is the anode, so **the positive voltage must be applied there.**
 * They will eat up all the current and burn out, so you must add a resistor to limit it.
 * Here's what the circuit looks like:   
 ![](https://upload.wikimedia.org/wikipedia/commons/c/c9/LED_circuit.svg)   
-https://en.wikipedia.org/wiki/LED_circuit
+<sup>[Image Credit](https://en.wikipedia.org/wiki/LED_circuit)</sup>
