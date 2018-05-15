@@ -22,3 +22,8 @@ It's in the 'c' programming language. The basic setup as follows:
 1. Open `blinky.ino`. Read through the comments to get a feel of what is going on.
 2. Click **Verify** to check if the code compiles.
 3. If that works, click **Upload**. The controller LEDs should flash a few times and then one of them should start blinking at an interval.
+## Modifying the sample keyboard firmware to get it working.
+1. Open `basic-keyboard.ino` in Arduino IDE and read through the code and comments. Try to understand what's going on.
+2. Change the `rowPins[]` array to be equal to your selected row pins starting from the top row and moving down. The syntax is `rowPins[] = {Pin Number 1, Pin Number 2, Pin Number 3, ...};`. For example: `rowPins[] = {6, 3, 8, 4, 9, 7, 12};`.
+3. Do the same thing for the `colPins[]` array, starting from the left column to the right column pins.
+4. Next look at the `layout[numRows][numCols]` 2-dimensional array. For each row create another array with `{},`, with create one char for each column. For example: `{'q', 'w', 'e', 'r', 't', 'y'},`. For the codes of modifiers look at https://www.arduino.cc/en/Reference/KeyboardModifiers.
