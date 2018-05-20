@@ -11,7 +11,9 @@ We will be making sandwich cases from acrylic.
 Part | Dimensions
 --- | ---
 Switch Cutout | 14.00x14.00mm
-Switch Spacing | 19.05x19.05mm
+Switch Spacing | ±19.05x±19.05mm
+Stabilizer Cutout | 3.30x14.20mm
+Stabilizer Spacing | ±11.95x-0.65mm
 Recommended Margin | 10.00mm
 Screw Hole Size | 1.95mm (diameter)
 
