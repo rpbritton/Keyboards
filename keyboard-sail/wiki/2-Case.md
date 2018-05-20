@@ -31,7 +31,7 @@ Command | Description
 `save` | Save the file. Do this frequently.
 
 8. Here is an example of numberpad's top plate. **The purple lines should not be there on the final draft, and are just shown to demonstrate the spacing.** Purple is key spacing, green is switch cutouts, blue is the outline, and yellow are the screw holes.   
-![](https://i.imgur.com/aDVlqlW.png)
+![](https://i.imgur.com/VmsCzrA.png)
 ## KLE + Plate & Case Builder: _Less freedom, less prone to human error._   
 * [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/)   
 * [Plate & Case Builder](http://builder.swillkb.com/)
