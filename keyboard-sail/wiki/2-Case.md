@@ -2,7 +2,7 @@
 We will be making sandwich cases from acrylic.
 ## CAD (Computer-Aided Design): _More freedom, more prone to human error._
 1. [Download DraftSight](https://www.3ds.com/products-services/draftsight-cad-software/free-download/) and open it.
-2. This program is text-command based. When you type, it should show up at the bottom.
+2. This program is (sort of) text-command based. When you type, it should show up at the bottom.
 3. Try the command `new` and choose the default format. That should create a new file.
 4. Run `save` and save two files, one for your bottom plate and one for your top plate.
 5. You are now ready to start. Get a calculater and get your layout ready on [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/) so you know the key spacing. (1u = 19.05mm).
