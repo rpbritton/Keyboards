@@ -37,4 +37,4 @@ Command | Description
 * [Plate & Case Builder](http://builder.swillkb.com/)
 ## Lasercutting your case
 1. Email me your `.dwg` files so I can download them onto the computer connected to the laser cuter.
-2. 
+2. I'll just show you what to do.
