@@ -11,11 +11,14 @@ We will be making sandwich cases from acrylic.
 Part | Dimensions
 --- | ---
 Switch Cutout | 14.00x14.00mm
-Switch Spacing | ±19.05x±19.05mm
+Switch Spacing | ±19.05x±19.05mm (from center to center)
 Stabilizer Cutout | 3.30x14.20mm
 Stabilizer Spacing | ±11.9x-0.45mm (offset from center of the switch)
 Recommended Margin | 10.00mm
 Screw Hole Radius | 0.975mm
+
+This is a image that displays the stabalizer dimensional relationship with the switch. Purple is the outline (for a 2x1u switch), inner green is the switch cutout, and the two outer green rectangles are the stabalizer cutouts.   
+![](https://i.imgur.com/FBlVz7D.png)
 
 7. Here are some useful commands:
 
