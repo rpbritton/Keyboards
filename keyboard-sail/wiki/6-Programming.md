@@ -1,6 +1,5 @@
 ## Set up the programming environment
-1. Download Arduino IDE: https://www.arduino.cc/en/Main/Software.
-2. Install and open Arduino IDE.
+1. Open up Arduino IDE on one of the lab computers.
 3. Go to **File** > **Preferences**.
 4. Copy and paste the following URL into the **Additional Board Manager URLs** box:
 ```
@@ -13,7 +12,6 @@ https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manag
 9. Search for `keyboard` and install `HID by Arduino`, `Keyboard by Arduino`, and `Mouse by Arduino`.
 10. Download the sample programs: https://github.com/rpbritton/keyboard-sail/archive/master.zip.
 ## Basics of Arduino Programming   
-It's in the 'c' programming language. The basic setup as follows:
 1. Add your includes.
 2. Create your global variables.
 3. `setup()` runs once at the beginning to configure stuff like your GPIO pins.

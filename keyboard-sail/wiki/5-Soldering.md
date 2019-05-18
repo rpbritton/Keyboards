@@ -3,17 +3,19 @@
 * ***Make sure the sum of the number of columns and rows is less than or equal to 20.***
 * Here is an example of a standard 104 key layout:   
 ![](https://npx3.files.wordpress.com/2016/01/standardwiring.png)   
-<sup>[Image Credit](https://npx3.wordpress.com/2016/01/28/the-blue-pill-option-building-a-keyboard-part-4/)</sup>
+<sup>[Image Credit](https://npx3.wordpress.com/2016/01/28/the-blue-pill-option-building-a-keyboard-part-4/)</sup>     
+**Go slowly. If you don't do a good job because you rushed, it will take more time to find the problems than if you hadn't.**
 ## Diodes / Rows
 1. ***Always check first to make sure your diodes work with a multimeter.***
 2. Make each row look like this using wirecutters and tweezers. I strongly urge you to ask if you don't understand why you should wire it this way.   
 ![](https://i.imgur.com/mAfs39u.jpg)
-3. I'd recommend soldering the switch pins first, and then adding solder between the diode leads. Creating a "hook" or twisting them together will help create a better solder joint.
+3. Solder the red spots. I'd recommend soldering the switch pins first, and then adding solder between the diode leads. Creating a "hook" or twisting them together will help create a better solder joint.
 ## Columns
-1. Measure out wire to connect the top and bottom switches of a column based on the other (unused) switch pin.
-2. Expose the parts of the wire that will touch the pins of the switches like this:
+1. With wire strippers, remove all of the rubber from the single-core wire. You should be left with a long piece of exposed wire.
+2. Measure out wire to connect the top and bottom switches of a column based on the other (unused) switch pin and cut it to length.
+2. Cover the parts of the wire that do not connect with the switch pins so it resembles this:
 ![](https://i.imgur.com/oEeDrEj.jpg)   
-3. Hook the ends wrap around the top and bottom pins. It should look like this:   
+3. Hook the ends wrap around the top and bottom pins. The final thing should look like this:   
 ![](https://i.imgur.com/dLgxQ5i.jpg)
 4. Add solder to each contact.
 ## Connecting it to the microcontroller
