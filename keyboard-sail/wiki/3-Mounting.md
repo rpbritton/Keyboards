@@ -4,6 +4,7 @@ As the acrylic used for the plates is not the correct thickness, the switches an
 2. Apply a small amount of glue to 2, 3, or 4 corners, and quickly place the switch in.
 3. Hold it down until it does not move anymore.
 ## Stabilizers
-1. File the hooks of the clips (as seen below) until they fit snuggly into the plate. The filing should be even, and the vertical parts should be parallel.
+1. File the hooks of the clips (as seen below) until they fit snuggly into the plate. The filing should be even, and the vertical parts should be parallel when inserted into the plate.
+![](https://raw.githubusercontent.com/rpbritton/keyboard-sail/master/images/stabilizer_filing.png)
 2. Orient the stabilizers so the larger side faces away from the switch.
 3. Glue them down, making sure they are flush with the plate.
