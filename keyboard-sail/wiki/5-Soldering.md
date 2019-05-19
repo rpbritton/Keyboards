@@ -1,3 +1,10 @@
+## Soldering basics
+1. Be safe. Wear safety glasses and don't touch the hot end.
+2. Touch the solder, soldering iron tip, and the connection you want to solder together.
+3. Here is an example of a good and bad solder joints:
+![](https://cdn-learn.adafruit.com/assets/assets/000/001/978/medium800/tools_Header_Joints.jpg)
+<sup>[Image Credit](https://learn.adafruit.com/adafruit-guide-excellent-soldering/common-problems)</sup>
+4. Don't touch it for too long or you may melt the switch, causing it to break.
 ## Think about your matrix
 * Split up your layout into rows and columns
 * ***Make sure the sum of the number of columns and rows is less than or equal to 20.***
