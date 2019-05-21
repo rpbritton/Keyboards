@@ -8,9 +8,10 @@ https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manag
 5. Click **OK** and go to **Tools** > **Board: ...** > **Board Manager...**
 6. Search for `SparkFun AVR Boards` and click **Install**.
 7. Click **Close** and go back to **Tools** > **Board: ...** and scroll down until you find `SparkFun Pro Micro`.
-8. Next go to **Sketch** > **Include Library** > **Manage Libraries...**
-9. Search for `keyboard` and install `HID by Arduino`, `Keyboard by Arduino`, and `Mouse by Arduino`.
-10. Download the sample programs: https://github.com/rpbritton/keyboard-sail/archive/master.zip.
+8. Go to **Tools** > **Processor:...** and select `ATmega32U4 (5V, 16 MHz)`.
+9. Next go to **Sketch** > **Include Library** > **Manage Libraries...**
+10. Search for `keyboard` and install `HID by Arduino`, `Keyboard by Arduino`, and `Mouse by Arduino`.
+11. Download the sample programs: https://github.com/rpbritton/keyboard-sail/archive/master.zip.
 ## Basics of Arduino Programming   
 1. Add your includes.
 2. Create your global variables.
