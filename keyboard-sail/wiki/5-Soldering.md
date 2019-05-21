@@ -16,7 +16,7 @@
 1. ***Always check first to make sure your diodes work with a multimeter.***
 2. Make each row look like this using wirecutters and tweezers. I strongly urge you to ask if you don't understand why you should wire it this way.   
 ![](https://i.imgur.com/mAfs39u.jpg)
-3. Solder the red spots. I'd recommend soldering the switch pins first, and then adding solder between the diode leads. Creating a "hook" or twisting them together will help create a better solder joint.
+3. Add solder. I'd recommend soldering the switch pins first, and then adding solder between the diode leads. Creating a "hook" or twisting them together will help create a better solder joint.
 ## Columns
 1. With wire strippers, remove all of the rubber from the single-core wire. You should be left with a long piece of exposed wire.
 2. Measure out wire to connect the top and bottom switches of a column based on the other (unused) switch pin and cut it to length.
