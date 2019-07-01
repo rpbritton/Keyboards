@@ -23,12 +23,23 @@ void UsbKeyboard::loop() {
   }
 }
 
-void UsbKeyboard::process(unsigned short key, bool released) {
+void UsbKeyboard::process(unsigned short key, bool pressed) {
   unsigned short keyCode = key & KEY_CODE;
   
   switch (key & KEY_TYPE) {
     case KEY_TYPE_NORMAL:
-      if (released) {
+      if (pressed) {
+        for (int x = 0; x < 6; ++x) {
+          if (m_keys[x] == keyCode) {
+            break;
+          }
+          else if (m_keys[x] == 0) {
+            setKey(x, keyCode);
+            break;
+          }
+        }
+      }
+      else {
         for (int x = 0; x < 6; ++x) {
           if (m_keys[x] == keyCode) {
             for (; x < 5; ++x) {
@@ -44,28 +55,9 @@ void UsbKeyboard::process(unsigned short key, bool released) {
           }
         }
       }
-      else {
-        for (int x = 0; x < 6; ++x) {
-          if (m_keys[x] == keyCode) {
-            break;
-          }
-          else if (m_keys[x] == 0) {
-            setKey(x, keyCode);
-            break;
-          }
-        }
-      }
       break;
     case KEY_TYPE_MODIFIER:
-      if (released) {
-        if (m_modifiers & keyCode) {
-          m_modifiers &= ~keyCode;
-        }
-        else {
-          return;
-        }
-      }
-      else {
+      if (pressed) {
         if (m_modifiers & keyCode) {
           return;
         }
@@ -73,15 +65,24 @@ void UsbKeyboard::process(unsigned short key, bool released) {
           m_modifiers |= keyCode;
         }
       }
+      else {
+        if (m_modifiers & keyCode) {
+          m_modifiers &= ~keyCode;
+        }
+        else {
+          return;
+        }
+      }
       Keyboard.set_modifier(m_modifiers);
       break;
     case KEY_TYPE_SYSTEM:
       break;
     case KEY_TYPE_MEDIA:
-      if (released) {
+      if (pressed) {
+        Keyboard.set_media(key);
       }
       else {
-        Keyboard.set_media(key);
+        Keyboard.set_media(0);
       }
       break;
     default:

@@ -4,7 +4,7 @@
 
 #define CODE_TYPE    ( 0xF0000000 )
 #define EVENT_TYPE   ( 0X0F000000 )
-#define EVENT_DATA   ( 0x00FFFFFF )
+#define CODE_DATA    ( 0x00FFFFFF )
 
 enum LayoutEvents {
   BOTH_EVENTS =     ( 0X00000000 ),
@@ -12,7 +12,7 @@ enum LayoutEvents {
   BOTH_OFF_EVENTS = ( 0X02000000 ),
   ON_EVENTS =       ( 0X03000000 ),
   OFF_EVENTS =      ( 0X04000000 ),
-  NO_EVENTS =      ( 0X05000000 ),
+  NO_EVENTS =       ( 0X05000000 ),
 };
 
 #define LAYOUT_CODE      ( 0x10000000 )

@@ -22,59 +22,26 @@ void setup() {
   usbKeyboard.setup(&leds);
 }
 
-void layoutCallback(unsigned char index, bool state, int layer) {
-  unsigned long result = Layout[layer][index];
+int lastIndex = 0;
 
-  switch (result & EVENT_TYPE) {
-    case BOTH_EVENTS:
-      break;
-    case ON_EVENTS:
-      if (!state) {
-        return;
-      }
-      break;
-    case BOTH_ON_EVENTS:
-      if (state) {
-        layoutCallback(index, false, layer);
-        if ((result & CODE_TYPE) == USB_KEYBOARD_CODE) {
-          Keyboard.send_now();
-        }
-      }
-      break;
-    case OFF_EVENTS:
-      if (state) {
-        return;
-      }
-      break;
-    case BOTH_OFF_EVENTS:
-      if (!state) {
-        layoutCallback(index, true, layer);
-        if ((result & CODE_TYPE) == USB_KEYBOARD_CODE) {
-          Keyboard.send_now();
-        }
-      }
-      break;
-    case NO_EVENTS:
-      return;
-  }
-  
-  switch (result & CODE_TYPE) {
+void processCode(unsigned long code, bool on) {
+  switch (code & CODE_TYPE) {
     case USB_KEYBOARD_CODE:
-      usbKeyboard.process(result, state);
+      usbKeyboard.process(code, on);
       break;
     case LAYOUT_CODE:
-      switch (result & (LAYOUT_CODE_TYPE | LAYOUT_CODE)) {
+      switch (code & (LAYOUT_CODE_TYPE | LAYOUT_CODE)) {
         case EMPTY_LAYER:
           for (int layer = currentLayer - 1; layer >= 0; --layer) {
-            if ((Layout[layer][index] & EVENT_TYPE) != LAYOUT_CODE
-                || (Layout[layer][index] & LAYOUT_CODE_TYPE) != EMPTY_LAYER) {
-              layoutCallback(index, state, layer);
+            if ((Layout[layer][lastIndex] & EVENT_TYPE) != LAYOUT_CODE
+                || (Layout[layer][lastIndex] & LAYOUT_CODE_TYPE) != EMPTY_LAYER) {
+              layoutCallback(lastIndex, on, layer);
               return;
             }
           }
           return;
         case LAYER:
-          int newLayer = result & LAYOUT_CODE_DATA;
+          int newLayer = code & LAYOUT_CODE_DATA;
           if (newLayer < 0 || newLayer >= NUM_LAYERS) {
             return;
           }
@@ -82,9 +49,51 @@ void layoutCallback(unsigned char index, bool state, int layer) {
       }
       break;
     case LED_CODE:
-      leds.process(result);
+      leds.process(code);
       break;
   }
+}
+
+void layoutCallback(unsigned char index, bool on, int layer) {
+  lastIndex = index;
+  unsigned long code = Layout[layer][index];
+
+  switch (code & EVENT_TYPE) {
+    case BOTH_EVENTS:
+      processCode(code, on);
+      break;
+    case ON_EVENTS:
+      if (on) {
+        processCode(code, true);
+      }
+      break;
+    case BOTH_ON_EVENTS:
+      if (on) {
+        processCode(code, true);
+        if ((code & CODE_TYPE) == USB_KEYBOARD_CODE) {
+          Keyboard.send_now();
+        }
+        processCode(code, false);
+      }
+      break;
+    case OFF_EVENTS:
+      if (!on) {
+        processCode(code, false);
+      }
+      break;
+    case BOTH_OFF_EVENTS:
+      if (!on) {
+        processCode(code, true);
+        if ((code & CODE_TYPE) == USB_KEYBOARD_CODE) {
+          Keyboard.send_now();
+        }
+        processCode(code, false);
+      }
+      break;
+    case NO_EVENTS:
+      return;
+  }
+  
 }
 void layoutCallback(unsigned char index, bool state) { layoutCallback(index, state, currentLayer); }
 void layoutCallback(unsigned char index) { layoutCallback(index, true, currentLayer); }

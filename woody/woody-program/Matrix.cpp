@@ -25,7 +25,7 @@ void Matrix::loop() {
         else if (m_buttons[r][c].debouncer < micros()) {
           m_buttons[r][c].state = !m_buttons[r][c].state;
           m_buttons[r][c].debouncer = 0;
-          m_callback(k_returnValues[r][c], m_buttons[r][c].state);
+          m_callback(k_returnValues[r][c], !m_buttons[r][c].state);
         }
       }
     }
