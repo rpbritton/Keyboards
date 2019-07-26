@@ -31,21 +31,25 @@ void processCode(unsigned long code, bool on) {
       break;
     case LAYOUT_CODE:
       switch (code & (LAYOUT_CODE_TYPE | LAYOUT_CODE)) {
-        case EMPTY_LAYER:
+        case EMPTY_LAYER: {
           for (int layer = currentLayer - 1; layer >= 0; --layer) {
             if ((Layout[layer][lastIndex] & EVENT_TYPE) != LAYOUT_CODE
                 || (Layout[layer][lastIndex] & LAYOUT_CODE_TYPE) != EMPTY_LAYER) {
               layoutCallback(lastIndex, on, layer);
-              return;
+              break;
             }
           }
-          return;
-        case LAYER:
+		    } break;
+        case LAYER: {
           int newLayer = code & LAYOUT_CODE_DATA;
           if (newLayer < 0 || newLayer >= NUM_LAYERS) {
-            return;
+            break;
           }
           currentLayer = newLayer;
+        } break;
+        case TOGGLE_WIN_KEY: {
+          usbKeyboard.toggleWinKey();
+        } break;
       }
       break;
     case LED_CODE:
@@ -91,9 +95,8 @@ void layoutCallback(unsigned char index, bool on, int layer) {
       }
       break;
     case NO_EVENTS:
-      return;
+      break;
   }
-  
 }
 void layoutCallback(unsigned char index, bool state) { layoutCallback(index, state, currentLayer); }
 void layoutCallback(unsigned char index) { layoutCallback(index, true, currentLayer); }

@@ -17,6 +17,7 @@ class UsbKeyboard {
   void setup(Leds *leds);
   void loop();
   void process(unsigned short code, bool pressed);
+  void toggleWinKey();
 
  private:
   void setKey(int index, unsigned char key);
@@ -27,4 +28,6 @@ class UsbKeyboard {
   
   Leds *m_leds;
   bool m_capsLock = false;
+
+  bool m_winKeyEnabled = false;
 };

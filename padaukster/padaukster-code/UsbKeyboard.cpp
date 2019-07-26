@@ -24,6 +24,10 @@ void UsbKeyboard::loop() {
 }
 
 void UsbKeyboard::process(unsigned short key, bool pressed) {
+  if ((key == MODIFIERKEY_GUI || key == MODIFIERKEY_RIGHT_GUI) && !m_winKeyEnabled) {
+    return;
+  }
+  
   unsigned short keyCode = key & KEY_CODE;
   
   switch (key & KEY_TYPE) {
@@ -119,4 +123,12 @@ void UsbKeyboard::setKey(int index, unsigned char keyCode) {
       Keyboard.set_key6(keyCode);
       break;
   }
+}
+
+void UsbKeyboard::toggleWinKey() {
+  if (m_winKeyEnabled) {
+    process(MODIFIERKEY_GUI, false);
+    process(MODIFIERKEY_RIGHT_GUI, false);
+  }
+  m_winKeyEnabled = !m_winKeyEnabled;
 }

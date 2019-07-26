@@ -1,6 +1,11 @@
 #include <Arduino.h>
 
+#include <EEPROM.h>
+
 #include "Leds.h"
+#include "Storage.h"
+
+extern volatile uint8_t usb_suspended;
 
 Leds::Leds() {
   
@@ -9,11 +14,20 @@ Leds::Leds() {
 void Leds::setup() {
   pinMode(k_ledPin, OUTPUT);
   pinMode(k_ledGamePin, OUTPUT);
+
+  m_ledVal = EEPROM.read(STORAGE_OFFSET_LEDS);
+  m_ledGameVal = EEPROM.read(STORAGE_OFFSET_LEDS + 1);
 }
 
 void Leds::loop() {
-  analogWrite(k_ledPin, m_ledVal);
-  analogWrite(k_ledGamePin, m_ledGameVal);
+  if (usb_suspended == 0) {
+    analogWrite(k_ledPin, 0);
+    analogWrite(k_ledGamePin, 0);
+  }
+  else {
+    analogWrite(k_ledPin, m_ledVal);
+    analogWrite(k_ledGamePin, m_ledGameVal);
+  }
 }
 
 void Leds::override(bool doOverride, int val) {
@@ -79,6 +93,13 @@ void Leds::set(unsigned char *var, int val, bool setEqual) {
   }
 
   *var = newVal;
+
+  if (var == &m_ledVal) {
+    EEPROM.write(STORAGE_OFFSET_LEDS, m_ledVal);
+  }
+  else if (var == &m_ledGameVal) {
+    EEPROM.write(STORAGE_OFFSET_LEDS + 1, m_ledGameVal);
+  }
 }
 
 void Leds::process(unsigned long code){
