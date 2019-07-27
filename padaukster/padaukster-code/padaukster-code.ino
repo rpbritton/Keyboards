@@ -13,12 +13,12 @@ Leds leds;
 UsbKeyboard usbKeyboard;
 
 unsigned int currentLayer = 0;
+unsigned long lastActive = 0;
 
 void setup() {
-  Serial.begin(1);
   matrix.setup(layoutCallback);
   knobs.setup(layoutCallback);
-  leds.setup();
+  leds.setup(&lastActive);
   usbKeyboard.setup(&leds);
 }
 
@@ -59,6 +59,8 @@ void processCode(unsigned long code, bool on) {
 }
 
 void layoutCallback(unsigned char index, bool on, int layer) {
+  lastActive = millis();
+  
   lastIndex = index;
   unsigned long code = Layout[layer][index];
 

@@ -20,7 +20,7 @@ enum LedsCodes {
 class Leds {
  public:
   Leds();
-  void setup();
+  void setup(unsigned long *lastActive);
   void loop();
   void process(unsigned long code);
   void override(bool doOverride, int val = k_defaultOverride);
@@ -35,6 +35,8 @@ class Leds {
   static const unsigned char k_ledInc = 10;
   static const unsigned char k_defaultOverride = 255;
 
+  static const unsigned long k_activityTimeout = 900000;
+
   unsigned char m_ledVal = 0;
   unsigned char m_ledGameVal = 0;
 
@@ -44,4 +46,6 @@ class Leds {
   unsigned char m_ledStoredVal = 0;
   unsigned char m_ledStoredGameVal = 0;
   bool m_storedEnableVal = true;
+
+  unsigned long *m_lastActive;
 };

@@ -5,28 +5,28 @@
 #include "Leds.h"
 #include "Storage.h"
 
-extern volatile uint8_t usb_suspended;
-
 Leds::Leds() {
   
 }
 
-void Leds::setup() {
+void Leds::setup(unsigned long *lastActive) {
   pinMode(k_ledPin, OUTPUT);
   pinMode(k_ledGamePin, OUTPUT);
 
   m_ledVal = EEPROM.read(STORAGE_OFFSET_LEDS);
   m_ledGameVal = EEPROM.read(STORAGE_OFFSET_LEDS + 1);
+
+  m_lastActive = lastActive;
 }
 
 void Leds::loop() {
-  if (usb_suspended == 0) {
-    analogWrite(k_ledPin, 0);
-    analogWrite(k_ledGamePin, 0);
-  }
-  else {
+  if (*m_lastActive+k_activityTimeout > millis()) {
     analogWrite(k_ledPin, m_ledVal);
     analogWrite(k_ledGamePin, m_ledGameVal);
+  }
+  else {
+    analogWrite(k_ledPin, 0);
+    analogWrite(k_ledGamePin, 0);
   }
 }
 
@@ -103,9 +103,6 @@ void Leds::set(unsigned char *var, int val, bool setEqual) {
 }
 
 void Leds::process(unsigned long code){
-  Serial.println(code);
-  Serial.flush();
-  
   switch (code & (LED_CODE_TYPE | LED_CODE)) {
     case LED_INC:
       set(&m_ledVal, k_ledInc, false);

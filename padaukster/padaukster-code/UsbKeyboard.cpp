@@ -33,9 +33,9 @@ void UsbKeyboard::process(unsigned short key, bool pressed) {
   switch (key & KEY_TYPE) {
     case KEY_TYPE_NORMAL:
       if (pressed) {
-        for (int x = 0; x < 6; ++x) {
+        for (int x = 0; x < 6; x++) {
           if (m_keys[x] == keyCode) {
-            break;
+            return;
           }
           else if (m_keys[x] == 0) {
             setKey(x, keyCode);
@@ -44,14 +44,14 @@ void UsbKeyboard::process(unsigned short key, bool pressed) {
         }
       }
       else {
-        for (int x = 0; x < 6; ++x) {
+        for (int x = 0; x < 6; x++) {
           if (m_keys[x] == keyCode) {
-            for (; x < 5; ++x) {
+            for (; x < 5; x++) {
               if (m_keys[x] != 0) {
                 setKey(x, m_keys[x + 1]);
               }
             }
-            setKey(x + 1, 0);
+            setKey(x, 0);
             break;
           }
           else if (m_keys[x] == 0) {

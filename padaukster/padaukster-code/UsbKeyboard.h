@@ -29,5 +29,5 @@ class UsbKeyboard {
   Leds *m_leds;
   bool m_capsLock = false;
 
-  bool m_winKeyEnabled = false;
+  bool m_winKeyEnabled = true;
 };
