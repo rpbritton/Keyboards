@@ -36,11 +36,11 @@ unsigned long Layout[NUM_LAYERS][NUM_EVENTS] = {
     KEY_TAB, KEY_Q, KEY_W, KEY_E, KEY_R, KEY_T, KEY_Y, KEY_U, KEY_I, KEY_O, KEY_P, KEY_LEFT_BRACE, KEY_RIGHT_BRACE, KEY_BACKSLASH, KEY_DELETE, KEY_END, KEY_PAGE_DOWN,
     KEY_CAPS_LOCK, KEY_A, KEY_S, KEY_D, KEY_F, KEY_G, KEY_H, KEY_J, KEY_K, KEY_L, KEY_SEMICOLON, KEY_QUOTE, KEY_ENTER,
     KEY_LEFT_SHIFT, KEY_Z, KEY_X, KEY_C, KEY_V, KEY_B, KEY_N, KEY_M, KEY_COMMA, KEY_PERIOD, KEY_SLASH, KEY_RIGHT_SHIFT, KEY_UP_ARROW,
-    KEY_LEFT_CTRL, KEY_RIGHT_GUI, KEY_RIGHT_ALT, KEY_SPACE, KEY_RIGHT_ALT, KEY_RIGHT_GUI, ( LAYER | 1 ), KEY_RIGHT_CTRL, KEY_LEFT_ARROW, KEY_DOWN_ARROW, KEY_RIGHT_ARROW,
+    KEY_LEFT_CTRL, KEY_LEFT_GUI, KEY_LEFT_ALT, KEY_SPACE, KEY_RIGHT_ALT, KEY_RIGHT_GUI, ( LAYER | 1 ), KEY_RIGHT_CTRL, KEY_LEFT_ARROW, KEY_DOWN_ARROW, KEY_RIGHT_ARROW,
     ( LED_SET | 0 ), ( LED_SET | 1 ),
   },
   {
-    ____, MEDIA_VOLUME_MUTE, MEDIA_VOLUME_DOWN, MEDIA_VOLUME_UP, (TOGGLE_WIN_KEY | ON_EVENTS), MEDIA_PREV, MEDIA_PLAY_PAUSE, MEDIA_NEXT, MEDIA_STOP, ____, ____, ____, ____, ____, ____, ____,
+    ____, ( MEDIA_VOLUME_MUTE | MEDIA_KEY ), ( MEDIA_VOLUME_DOWN | MEDIA_KEY ), ( MEDIA_VOLUME_UP | MEDIA_KEY ), (TOGGLE_WIN_KEY | ON_EVENTS), (MEDIA_PREV | MEDIA_KEY ), ( MEDIA_PLAY_PAUSE | MEDIA_KEY ), ( MEDIA_NEXT | MEDIA_KEY ), ( MEDIA_STOP | MEDIA_KEY ), ____, ____, ____, ____, ____, ____, ____,
     ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____,
     ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____,
     ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____,

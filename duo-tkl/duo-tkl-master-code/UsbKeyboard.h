@@ -1,15 +1,20 @@
 #pragma once
 
 #define USB_KEYBOARD_CODE      ( 0x00000000 )
+#define USB_KEYBOARD_CODE_TYPE ( 0x00FF0000 )
+#define USB_KEYBOARD_CODE_DATA ( 0x0000FFFF )
 
-#define KEY_CODE          ( 0x000000FF )
+enum USBCodes {
+  DEFAULT_KEY =    ( 0x00000000 | USB_KEYBOARD_CODE ),
+  MEDIA_KEY =      ( 0x00010000 | USB_KEYBOARD_CODE ),
+};
 
 class UsbKeyboard {
  public:
   UsbKeyboard();
   void setup(void (*callback)(unsigned char, bool));
   void loop();
-  void process(unsigned short code, bool pressed);
+  void process(unsigned long code, bool pressed);
   void toggleWinKey();
 
  private:

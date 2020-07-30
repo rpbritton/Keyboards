@@ -30,24 +30,29 @@ void UsbKeyboard::loop() {
   }
 }
 
-void UsbKeyboard::process(unsigned short key, bool pressed) {
-  if ((key == KEY_LEFT_GUI || key == KEY_RIGHT_GUI) && !m_winKeyEnabled) {
-    return;
-  }
+void UsbKeyboard::process(unsigned long code, bool pressed) {
+  switch (code & (USB_KEYBOARD_CODE_TYPE | USB_KEYBOARD_CODE)) {
+    case DEFAULT_KEY: {
+      KeyboardKeycode key = code & USB_KEYBOARD_CODE_DATA;
 
-  if ((key >= 0xB0 && key <= 0xB7) || key == 0xE2 || key == 0xE9 || key == 0xEA) { // Media keys
-    if (pressed) {
-      Consumer.press(key);
-    } else {
-      Consumer.release(key);
-    }
-  } else { // All other keys
-    KeyboardKeycode keyCode = key & KEY_CODE;
-    if (pressed) {
-      SingleNKROKeyboard.add(keyCode);
-    } else {
-      SingleNKROKeyboard.remove(keyCode);
-    }
+      if ((key == KEY_LEFT_GUI) && !m_winKeyEnabled) {
+        return;
+      }
+      
+      if (pressed) {
+        SingleNKROKeyboard.add(key);
+      } else {
+        SingleNKROKeyboard.remove(key);
+      }
+    } break;
+    case MEDIA_KEY: {
+      ConsumerKeycode key = code & USB_KEYBOARD_CODE_DATA;
+      if (pressed) {
+        Consumer.press(key);
+      } else {
+        Consumer.release(key);
+      }
+    } break;
   }
   
   m_changed = true;
@@ -56,7 +61,6 @@ void UsbKeyboard::process(unsigned short key, bool pressed) {
 void UsbKeyboard::toggleWinKey() {
   if (m_winKeyEnabled) {
     process(KEY_LEFT_GUI, false);
-    process(KEY_RIGHT_GUI, false);
   }
   m_winKeyEnabled = !m_winKeyEnabled;
 }
