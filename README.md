@@ -1,6 +1,8 @@
 # Keyboards
 This repository contains resources on various keyboard related things.
 
+![split keyboard](images/split-keyboard.jpg)
+
 ## CAD files for cases.
 ![cad](images/example-cad.png)
 
